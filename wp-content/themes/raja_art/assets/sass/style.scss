@@ -1,0 +1,1249 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+/*======= VARIABLES =======*/
+
+$raja-red: #d62631;
+$raja-brown: #caa870;
+
+/*======= VARIABLES =======*/
+
+
+
+
+
+/*======= GENERAL =======*/
+
+body {
+	padding-top: 60px;
+	font-family: 'Open Sans', sans-serif;
+
+	.clear {
+		clear: both;
+	}
+
+	a {
+		text-decoration: none;
+		color: #000;
+
+		&:hover {
+			text-decoration: inherit;
+			color: inherit;
+		}
+
+		&:focus {
+			text-decoration: none;
+			color: inherit;
+		}
+	}
+
+	p {
+		line-height: 28px;
+
+		strong {
+			font-weight: 700;
+		}
+	}
+
+	.legend {
+		font-size: 14px;
+		font-style: italic;
+		color: #777;
+	}
+
+	h3 {
+		font-family: 'Teko', sans-serif;
+		color: #000;
+		font-size: 50px;
+		letter-spacing: 7px;
+		font-weight: 600;
+		text-transform: uppercase;
+
+		&.little {
+			font-size: 35px;
+			letter-spacing: 4px;
+		}
+	}
+
+	h4 {
+		font-family: 'Teko', sans-serif;
+		font-size: 26px;
+		letter-spacing: 0.5px;
+		color: #000;
+
+		span {
+			color: $raja-red;
+			text-transform: uppercase;
+		}
+
+		&.big {
+			font-size: 35px;
+		}
+	}
+
+	h5 {
+		font-weight: 700;
+		font-size: 18px;
+
+		&.h5-brown {
+			color: #a27834;
+		}
+	}
+}
+
+.fadein {
+	opacity: 0;
+}
+
+.top-page {
+	text-align: center;
+	padding: 80px 0 0;
+
+	p {
+		padding-top: 30px;
+	}
+}
+
+.wrapper {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+.cta {
+	display: inline-block;
+	background: #000;
+	color: #fff;
+	padding: 10px 20px;
+	font-family: 'Teko', sans-serif;
+	text-transform: uppercase;
+	font-size: 21px;
+	letter-spacing: 2px;
+	font-weight: 400;
+
+	&:hover {
+		background: $raja-red;
+		color: #fff;
+	}
+
+	&:focus {
+		color: #fff;
+	}
+}
+
+.read-less {
+	display: none;
+	margin-top: 10px;
+}
+
+.thumb-work {
+	height: 400px;
+	display: block;
+	position: relative;
+	padding: 0;
+	margin-top: 40px;
+
+	@media screen and (max-width: 991px) {
+		position: relative !important;
+		width: 100% !important;
+	}
+
+	&:hover .img-thumb img {
+		transform: translateX(-50%) translateY(-50%) scale(1.1,1.1);
+		-webkit-transform: translateX(-50%) translateY(-50%) scale(1.1,1.1);
+	}
+
+	.img-thumb {
+		display: block;
+		width: 100%;
+		height: 300px;
+		overflow: hidden;
+		position: relative;
+
+		img {
+			width: 70%;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translateX(-50%) translateY(-50%) scale(1,1);
+			-webkit-transform: translateX(-50%) translateY(-50%) scale(1,1);
+			transition: 0.5s;
+			-webkit-transition: 0.5s;
+		}
+	}
+
+	.infos-work-zone {
+		display: block;
+		position: relative;
+		height: 100px;
+
+		.infos-work {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translateX(-50%) translateY(-50%);
+			-webkit-transform: translateX(-50%) translateY(-50%);
+			text-align: center;
+
+			.work-name {
+				margin-top: 7px;
+			}
+		}
+	}
+}
+
+footer {
+	display: block;
+	width: 100%;
+	height: 30px;
+	background: #000;
+	color: #fff;
+	padding: 30px;
+	text-align: center;
+}
+
+/*======= GENERAL =======*/
+
+
+
+
+
+/*======= HEADER MENU =======*/
+
+.raja-art-logo-resp {
+	display: none;
+	height: 40px;
+	position: absolute;
+	left: 50%;
+	z-index: 3;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+
+	@media screen and (max-width: 991px) {
+		display: block;
+	}
+}
+
+header {
+	position: fixed;
+	z-index: 2;
+	display: block;
+	width: 100%;
+	height: 60px;
+	background: #fff;
+	top: 0;
+	-webkit-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.15);
+	-moz-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.15);
+	box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.15);
+
+	@media screen and (max-width: 991px) {
+		height: auto;
+		padding: 30px 0;
+	}
+
+
+	.raja-art-logo {
+		height: 40px;
+		display: block;
+		position: absolute;
+		left: 30px;
+		top: 10px;
+
+		@media screen and (max-width: 991px) {
+			left: 50%;
+			top: 11px;
+			transform: translateX(-50%);
+			-webkit-transform: translateX(-50%);
+		}
+	}
+
+	ul {
+		padding-left: 100px;
+
+		@media screen and (max-width: 991px) {
+			padding: 20px 0 0;
+			text-align: center;
+			display: none;
+		}
+
+
+		li {
+			display: inline-block;
+			margin-left: 20px;
+			padding-top: 20px;
+
+			@media screen and (max-width: 991px) {
+				display: block;
+				margin: 0;
+				padding-top: 40px;
+			}
+
+			&:nth-child(1) {
+				margin-left: 0;
+			}
+
+
+			a {
+				font-family: 'Teko', sans-serif;
+				text-transform: uppercase;
+				font-size: 21px;
+				letter-spacing: 1px;
+				color: #000;
+
+				&:hover {
+					color: $raja-red;
+				}
+			}
+		}
+	}
+
+}
+
+/*======= HEADER MENU =======*/
+
+
+
+
+
+/*======= HOME =======*/
+
+.top-cover {
+	position: relative;
+	height: 500px;
+	overflow: hidden;
+	color: #fff;
+	background-image: url(../images/top-cover.jpg);
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: bottom center;
+
+ 	.logo-home {
+		width: 220px;
+		display: block;
+	}			
+
+  	.video-home {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translateX(-50%) translateY(-50%);
+		transform: translateX(-50%) translateY(-50%);
+		min-width: 100%;
+
+		@media screen and (max-width: 1250px) {
+		  	width: inherit;
+		}
+
+		@media screen and (max-width: 991px) {
+		  	display: none;
+		}
+	}
+
+  	.content-cover {
+  		width: 100%;
+  		position: absolute;
+  		z-index: 1;
+  		top: 50%;
+  		left: 100px;
+  		transform: translateY(-50%);
+
+  		@media screen and (max-width: 991px) {
+  			width: auto;
+		  	left: 50%;
+		  	transform: translateY(-50%) translateX(-50%);
+		  	-webkit-transform: translateY(-50%) translateX(-50%);
+		  	text-align: center;
+		}
+
+  		.cta {
+  			margin-top: 40px;
+  		}
+  	}
+
+  	&:after {
+  		content: '';
+  		width: 100%;
+  		height: 100%;
+  		background: -moz-linear-gradient(left, rgba(255,255,255,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(left, rgba(255,255,255,0.65) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to right, rgba(255,255,255,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6ffffff', endColorstr='#00000000',GradientType=1 );
+  		position: absolute;
+  		left: 0;
+  		top: 0;
+  	}
+}
+
+.citation {
+	max-width: 700px;
+	text-align: center;
+	margin: 50px auto;
+	position: relative;
+
+	p {
+		text-align: center;
+		background: $raja-brown;
+		display: inline-block;
+		padding: 10px 15px;
+		color: #fff;
+		font-style: italic;
+		font-size: 18px;
+	}
+
+	.picto-citation {
+		display: block;
+		width: 50px;
+	}
+
+	.picto-citation2 {
+		display: block;
+		position: absolute;
+		width: 50px;
+		right: 0;
+	}
+}
+
+.block-dk {
+	background: #f7f2e3;
+	position: relative;
+	padding: 110px 0 100px;
+	margin-top: 150px;
+
+	.title-dk {
+		text-align: center;
+
+		h5 {
+			margin-top: 10px;
+		}
+	}
+
+	.photo-dk {
+		position: absolute;
+		left: 50%;
+		top: -85px;
+		transform: translateX(-50%);
+		-webkit-transform: translateX(-50%);
+		width: 180px;
+		height: 180px;
+		overflow: hidden;
+		border-radius: 50%;
+		border: 15px solid #f7f2e3;
+
+		img {
+			width: 400px;
+			margin-left: -118px;
+			margin-top: -10px;
+		}
+	}
+
+	p {
+		margin-top: 40px;
+	}
+
+	.text-full {
+		display: none;
+	}
+
+	.cta-brown {
+		position: absolute;
+		left: 50%;
+		bottom: 30px;
+		transform: translateX(-50%);
+		-webkit-transform: translateX(-50%);
+	}
+}
+
+.last-acquisition {
+	padding: 70px 0;
+	position: relative;
+
+	h5 {
+		text-align: center;
+	}
+}
+
+/*======= HOME =======*/
+
+
+
+
+
+/*======= GROUPE RAJA =======*/
+
+.group {
+
+	#map {
+        width: 100%;
+        height: 500px;
+
+        @media screen and (max-width: 991px) {
+			height: 300px;
+		}
+    }
+
+	.story-photo {
+		text-align: center;
+		padding: 30px 0;
+
+		img {
+			width: 250px;
+			padding-bottom: 10px;
+		}
+
+		.bigphoto {
+			width: 100%;
+		}
+	}
+
+
+	.group-storybloc {
+
+		padding: 60px 0;
+
+		h3 {
+			color: $raja-red;
+			letter-spacing: 3px;
+			text-align: center;
+			padding-bottom: 70px;
+
+			&:after {
+				content: '';
+				display: block;
+				position: absolute;
+				width: 2px;
+				height: 40px;
+				background: $raja-red;
+				left: 50%;
+				margin-top: 10px;
+				transform: translateX(-50%);
+				-webkit-transform: translateX(-50%);
+			}
+		}
+	}
+
+
+}
+
+/*======= GROUPE RAJA =======*/
+
+
+
+
+
+/*======= GALERIE =======*/
+
+.galerie {
+
+	padding-bottom: 30px;
+
+	.top-page {
+		padding-bottom: 70px;
+
+		.text-full {
+			display: none;
+			padding-bottom: 40px;
+		}
+
+		.cta {
+			margin-top: 20px;
+		}
+
+		.text-intro {
+			padding-bottom: 25px;
+		}
+	}
+
+	.filters {
+		text-align: center;
+
+		a {
+			margin-left: 20px;
+			display: inline-block;
+			padding: 10px;
+			font-weight: 600;
+			transition: 0.2s;
+			-webkit-transition: 0.2s;
+
+			&:nth-child(1) {
+				margin-left: 0;
+			}
+
+			&.active {
+				background: #eee;
+			}
+		}
+	}
+}
+
+/*======= GALERIE =======*/
+
+
+
+
+
+/*======= FICHE OEUVRE =======*/
+
+.fiche-oeuvre {
+
+	.top-page {
+
+		h4 {
+			padding-bottom: 10px;
+		}
+
+		p {
+			padding-top: 0px;
+			font-weight: 600;
+		}
+	}
+
+	.work-show-zone {
+		position: relative;
+		margin-top: 60px;
+		width: 100%;
+		overflow: hidden;
+
+		img {
+			display: block;
+			max-height: 600px;
+			margin: 0 auto;
+			max-width: 100%;
+		}
+
+		.hidden {
+			display: none;
+		}
+	}
+
+	.little-thumbnails {
+		padding-top: 40px;
+
+		ul {
+			text-align: center;
+
+			li {
+				display: inline-block;
+				overflow: hidden;
+				margin-left: 20px;
+				border: 1px solid #ddd;
+
+				&:nth-child(1) {
+					margin-left: 0;
+				}
+
+				a {
+					display: block;
+					position: relative;
+					width: 50px;
+					height: 50px;
+
+					img {
+						display: block;
+						position: absolute;
+						width: 130%;
+						top: 50%;
+						left: 50%;
+						transform: translateX(-50%) translateY(-50%);
+						-webkit-transform: translateX(-50%) translateY(-50%);
+					}
+				}
+			}
+		}
+	}
+
+	.desc-work {
+
+		padding: 30px;
+		text-align: center;
+		font-weight: 600;
+	}
+
+	.more {
+		display: inline-block;
+		margin-top: 20px;
+		color: #333;
+		text-decoration: underline;
+		font-weight: 700;
+	}
+
+	.same-author {
+		padding: 50px 0 40px;
+		display: block;
+
+		p {
+			text-align: center;
+		}
+
+		.thumb-work {
+			margin-top: 30px;
+		}
+	}
+}
+
+/*======= FICHE OEUVRE =======*/
+
+
+
+
+
+/*======= ARTISTES =======*/
+
+.artiste {
+
+	.top-page {
+		padding-bottom: 60px;
+	}
+
+	.author-list {
+		position: relative;
+		padding: 70px 0 140px;
+
+		@media screen and (max-width: 991px) {
+			padding: 0 0 30px;
+		}
+
+		ul {
+
+			li {
+
+				.author-thumb {
+					display: block;
+					position: absolute;
+					right: 0;
+					display: none;
+					transform: translateY(-50%);
+					-webkit-transform: translateY(-50%);
+					opacity: 0;
+					transition: 0.2s;
+					-webkit-transition: 0.2s;
+
+					@media screen and (max-width: 991px) {
+						display: none;
+					}
+				}
+
+				a {
+					display: inline-block;
+					transition: 0.2s;
+					-webkit-transition: 0.2s;
+
+					@media screen and (max-width: 991px) {
+						display: block;
+						text-align: center;
+						margin-top: 40px;
+					}
+
+					&:hover {
+						transform: translateX(10px);
+						-webkit-transform: translateX(10px);
+
+						@media screen and (max-width: 991px) {
+							transform:  inherit;
+							-webkit-transform: inherit;
+						}
+					}
+
+					&:hover + .author-thumb {
+						display: block;
+						opacity: 1;
+
+						@media screen and (max-width: 991px) {
+							display: none;
+						}
+					}
+
+					h4 {
+						margin: 15px 0;
+					}
+				}
+			}
+		}
+	}
+
+	
+}
+
+/*======= ARTISTES =======*/
+
+
+
+
+
+/*======= FICHE ARTISTE =======*/
+
+.fiche-artiste {
+
+	.wrapper {
+		position: relative;
+	}
+
+	.top-page {
+
+		p {
+			padding-top: 10px;
+		}
+	}
+
+	.author-bio {
+		padding: 50px 0 0;
+	}
+
+	.p-center {
+		position: absolute;
+		z-index: 1;
+		display: block;
+		padding: 0 20px;
+		left: 50%;
+		transform: translateX(-50%);
+		-webkit-transform: translateX(-50%);
+		margin-top: 50px;
+		font-weight: 600;
+		background: #fff;
+		text-align: center;
+	}
+
+	.lightbar {
+		position: relative;
+		display: block;
+		width: 100%;
+		height: 1px;
+		background: #aaa;
+		margin-top: 65px;
+	}
+
+	.thumb-work {
+		margin-top: 60px;
+	}
+
+	.author-links {
+		margin-top: 50px;
+
+		li {
+			margin-top: 20px;
+			color: #333;
+
+			span {
+				font-weight: 700;
+			}
+
+			a {
+				color: #333;
+			}
+		}
+		
+	}
+}
+
+/*======= FICHE ARTISTE =======*/
+
+
+
+
+
+/*======= ACTUS =======*/
+
+.actus {
+	padding-bottom: 30px;
+
+	.list-short-article {
+
+		.article {
+
+			&:nth-child(even) {
+				border-left: 10px solid #fff;
+
+				@media screen and (max-width: 991px) {
+					border: 0;
+				}
+			}
+
+			&:nth-child(odd) {
+				border-right: 10px solid #fff;
+
+				@media screen and (max-width: 991px) {
+					border: 0;
+				}
+			}
+		}
+	}
+
+	.article {
+		height: 400px;
+		background: #f6f6f6;
+		margin-top: 40px;
+		padding: 0;
+
+		@media screen and (max-width: 991px) {
+			height: auto;
+		}
+
+		&.short {
+			height: 600px;
+			
+			.thumb-article {
+				height: 200px;
+
+				img {
+					width: 100%;
+					height: auto;
+				}
+			}
+
+			.infos-article {
+				height: 400px;
+
+				.infos-content {
+
+				}
+			}
+		}
+
+		.thumb-article {
+			overflow: hidden;
+			position: relative;
+			height: 100%;
+			padding: 0;
+
+			@media screen and (max-width: 991px) {
+				height: 200px;
+			}
+
+			img {
+				position: absolute;
+				height: 100%;
+				left: 50%;
+				top: 50%;
+				transform: translateY(-50%) translateX(-50%);
+				-webkit-transform: translateY(-50%) translateX(-50%);
+
+				@media screen and (max-width: 991px) {
+					position: relative;
+					width: 100%;
+					height: auto;
+					top: inherit;
+					left: inherit;
+					transform: inherit;
+					-webkit-transform: inherit;
+				}
+			}
+		}
+
+		.infos-article {
+			position: relative;
+			height: 100%;
+			padding: 0;
+
+			.infos-content {
+				padding: 50px;
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				-webkit-transform: translateY(-50%);
+
+				@media screen and (max-width: 991px) {
+					position: relative;
+					padding: 40px 20px;
+					top: inherit;
+					transform: inherit;
+					-webkit-transform: inherit;
+				}
+
+				.blog-cat {
+					text-transform: uppercase;
+					font-size: 14px;
+					color: #666;
+					letter-spacing: 1px;
+				}
+
+				h4 {
+					margin-top: 20px;
+					color: $raja-red;
+				}
+
+				h5 {
+					margin-top: 5px;
+					font-weight: 600;
+				}
+
+				.excerpt-article {
+					margin-top: 25px;
+				}
+
+				.cta {
+					margin-top: 20px;
+				}
+			}
+		}
+	}
+}
+
+/*======= ACTUS =======*/
+
+
+
+
+
+/*======= PAGE ACTUS =======*/
+
+	.blog-page {
+		padding-bottom: 50px;
+
+		.top-page {
+
+			h3 {
+				color: $raja-red;
+			}
+
+			h5 {
+				margin-top: 10px;
+			}
+		}
+
+		.cover-article {
+			margin-top: 70px;
+			height: 400px;
+			overflow: hidden;
+			position: relative;
+
+			@media screen and (max-width: 991px) {
+				height: auto;
+			}
+
+			img {
+				width: 100%;
+
+			}
+		}
+
+		.content-article {
+			padding-top: 50px;
+		}
+
+		
+	}
+
+/*======= PAGE ACTUS =======*/
+
+
+
+
+
+/*======= CONTACT =======*/
+
+.contact {
+
+	padding-bottom: 50px;
+
+	.coord {
+
+		p {
+			display: inline-block;
+			margin-left: 30px;
+
+			&:nth-child(1) {
+				margin-left: 0;
+			}
+		}
+	}
+
+	.wpcf7 form div.visible-only-if-invalid {
+	    display: none;
+	}
+	 
+	.wpcf7 form.invalid div.visible-only-if-invalid {
+	    display: block;
+	}
+
+	.captcha {
+		margin: 20px auto;
+		width: 304px;
+
+	}
+
+	form {
+		display: block;
+		max-width: 600px;
+		margin: 0 auto;
+		padding-top: 30px;
+
+		label {
+			width: 100%;
+			margin-bottom: 30px;
+		}
+
+		textarea {
+			max-width: 600px;
+			line-height: 22px;
+		}
+
+		.wpcf7-submit {
+			display: inline-block;
+			margin: 0 auto;
+			display: block;
+			border: none;
+			background: #000;
+			color: #fff;
+			padding: 10px 30px;
+			font-family: 'Teko', sans-serif;
+			text-transform: uppercase;
+			font-size: 21px;
+			letter-spacing: 2px;
+			font-weight: 400;
+
+			&:hover {
+				background: $raja-red;
+				color: #fff;
+			}
+
+			&:focus {
+				color: #fff;
+			}
+		}
+	}
+
+	.input {
+		display: block;
+		width: 100%;
+		padding: 15px;
+		border: 1px solid #ddd;
+		margin: 20px 0 10px;
+		transition: 0.2s;
+
+		&:focus {
+			outline: none;
+			text-indent: 10px;
+		}
+	}
+
+	.wpcf7-response-output, .wpcf7-display-none, .wpcf7-validation-errors {
+		padding: 20px;
+		line-height: 20px;
+		border: 1px solid #eb5563;
+	}
+
+	.ajax-loader {
+		margin-top: 6px;
+	    position: absolute;
+	    left: 50%;
+	    transform: translateX(-50%);
+	    -webkit-transform: translateX(-50%);
+	    width: 30px;
+	}
+}
+
+/*======= CONTACT =======*/
+
+
+
+
+
+/*======= RESPONSIVE =======*/
+
+.burger-btn { 
+	position: fixed;
+	z-index: 5;
+	left: 20px;
+	cursor: pointer;
+	padding: 12px 0;
+	display: none;
+	top: 17px;
+
+  @media screen and (max-width: 991px) {
+		display: block;
+	}
+  
+  span {
+    position: relative;
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #333;
+    transition: all .2s ease-in-out;
+    
+    &:before, &:after {
+      position: absolute;
+      background: #333;
+      content: '';
+      width: 20px;
+      height: 2px;
+      transition: all .2s ease-in-out;
+    }
+    
+    &:before {
+      top: -8px;
+    }
+    
+    &:after {
+      top: 8px;
+    }
+  }
+}
+
+.burger-btn.active {
+  span {
+    background: transparent;
+    
+    &:before {
+      transform: rotate(45deg) translate(5px, 6px);
+    }
+    
+    &:after {
+      transform: rotate(-45deg) translate(5px, -6px);
+    }
+  }
+} 
+
+/*======= RESPONSIVE =======*/
+
+
+
+
+

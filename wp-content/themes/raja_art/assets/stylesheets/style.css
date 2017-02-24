@@ -1,0 +1,1191 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* line 6, ../sass/style.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 27, ../sass/style.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 31, ../sass/style.scss */
+body {
+  line-height: 1;
+}
+
+/* line 34, ../sass/style.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 37, ../sass/style.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 40, ../sass/style.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 45, ../sass/style.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*======= VARIABLES =======*/
+/*======= VARIABLES =======*/
+/*======= GENERAL =======*/
+/* line 65, ../sass/style.scss */
+body {
+  padding-top: 60px;
+  font-family: 'Open Sans', sans-serif;
+}
+/* line 69, ../sass/style.scss */
+body .clear {
+  clear: both;
+}
+/* line 73, ../sass/style.scss */
+body a {
+  text-decoration: none;
+  color: #000;
+}
+/* line 77, ../sass/style.scss */
+body a:hover {
+  text-decoration: inherit;
+  color: inherit;
+}
+/* line 82, ../sass/style.scss */
+body a:focus {
+  text-decoration: none;
+  color: inherit;
+}
+/* line 88, ../sass/style.scss */
+body p {
+  line-height: 28px;
+}
+/* line 91, ../sass/style.scss */
+body p strong {
+  font-weight: 700;
+}
+/* line 96, ../sass/style.scss */
+body .legend {
+  font-size: 14px;
+  font-style: italic;
+  color: #777;
+}
+/* line 102, ../sass/style.scss */
+body h3 {
+  font-family: 'Teko', sans-serif;
+  color: #000;
+  font-size: 50px;
+  letter-spacing: 7px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+/* line 110, ../sass/style.scss */
+body h3.little {
+  font-size: 35px;
+  letter-spacing: 4px;
+}
+/* line 116, ../sass/style.scss */
+body h4 {
+  font-family: 'Teko', sans-serif;
+  font-size: 26px;
+  letter-spacing: 0.5px;
+  color: #000;
+}
+/* line 122, ../sass/style.scss */
+body h4 span {
+  color: #d62631;
+  text-transform: uppercase;
+}
+/* line 127, ../sass/style.scss */
+body h4.big {
+  font-size: 35px;
+}
+/* line 132, ../sass/style.scss */
+body h5 {
+  font-weight: 700;
+  font-size: 18px;
+}
+/* line 136, ../sass/style.scss */
+body h5.h5-brown {
+  color: #a27834;
+}
+
+/* line 142, ../sass/style.scss */
+.fadein {
+  opacity: 0;
+}
+
+/* line 146, ../sass/style.scss */
+.top-page {
+  text-align: center;
+  padding: 80px 0 0;
+}
+/* line 150, ../sass/style.scss */
+.top-page p {
+  padding-top: 30px;
+}
+
+/* line 155, ../sass/style.scss */
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* line 161, ../sass/style.scss */
+.cta {
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  padding: 10px 20px;
+  font-family: 'Teko', sans-serif;
+  text-transform: uppercase;
+  font-size: 21px;
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+/* line 172, ../sass/style.scss */
+.cta:hover {
+  background: #d62631;
+  color: #fff;
+}
+/* line 177, ../sass/style.scss */
+.cta:focus {
+  color: #fff;
+}
+
+/* line 182, ../sass/style.scss */
+.read-less {
+  display: none;
+  margin-top: 10px;
+}
+
+/* line 187, ../sass/style.scss */
+.thumb-work {
+  height: 400px;
+  display: block;
+  position: relative;
+  padding: 0;
+  margin-top: 40px;
+}
+@media screen and (max-width: 991px) {
+  /* line 187, ../sass/style.scss */
+  .thumb-work {
+    position: relative !important;
+    width: 100% !important;
+  }
+}
+/* line 199, ../sass/style.scss */
+.thumb-work:hover .img-thumb img {
+  transform: translateX(-50%) translateY(-50%) scale(1.1, 1.1);
+  -webkit-transform: translateX(-50%) translateY(-50%) scale(1.1, 1.1);
+}
+/* line 204, ../sass/style.scss */
+.thumb-work .img-thumb {
+  display: block;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+}
+/* line 211, ../sass/style.scss */
+.thumb-work .img-thumb img {
+  width: 70%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%) scale(1, 1);
+  -webkit-transform: translateX(-50%) translateY(-50%) scale(1, 1);
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+}
+/* line 223, ../sass/style.scss */
+.thumb-work .infos-work-zone {
+  display: block;
+  position: relative;
+  height: 100px;
+}
+/* line 228, ../sass/style.scss */
+.thumb-work .infos-work-zone .infos-work {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  text-align: center;
+}
+/* line 236, ../sass/style.scss */
+.thumb-work .infos-work-zone .infos-work .work-name {
+  margin-top: 7px;
+}
+
+/* line 243, ../sass/style.scss */
+footer {
+  display: block;
+  width: 100%;
+  height: 30px;
+  background: #000;
+  color: #fff;
+  padding: 30px;
+  text-align: center;
+}
+
+/*======= GENERAL =======*/
+/*======= HEADER MENU =======*/
+/* line 261, ../sass/style.scss */
+.raja-art-logo-resp {
+  display: none;
+  height: 40px;
+  position: absolute;
+  left: 50%;
+  z-index: 3;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+}
+@media screen and (max-width: 991px) {
+  /* line 261, ../sass/style.scss */
+  .raja-art-logo-resp {
+    display: block;
+  }
+}
+
+/* line 275, ../sass/style.scss */
+header {
+  position: fixed;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  height: 60px;
+  background: #fff;
+  top: 0;
+  -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.15);
+}
+@media screen and (max-width: 991px) {
+  /* line 275, ../sass/style.scss */
+  header {
+    height: auto;
+    padding: 30px 0;
+  }
+}
+/* line 293, ../sass/style.scss */
+header .raja-art-logo {
+  height: 40px;
+  display: block;
+  position: absolute;
+  left: 30px;
+  top: 10px;
+}
+@media screen and (max-width: 991px) {
+  /* line 293, ../sass/style.scss */
+  header .raja-art-logo {
+    left: 50%;
+    top: 11px;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+  }
+}
+/* line 308, ../sass/style.scss */
+header ul {
+  padding-left: 100px;
+}
+@media screen and (max-width: 991px) {
+  /* line 308, ../sass/style.scss */
+  header ul {
+    padding: 20px 0 0;
+    text-align: center;
+    display: none;
+  }
+}
+/* line 318, ../sass/style.scss */
+header ul li {
+  display: inline-block;
+  margin-left: 20px;
+  padding-top: 20px;
+}
+@media screen and (max-width: 991px) {
+  /* line 318, ../sass/style.scss */
+  header ul li {
+    display: block;
+    margin: 0;
+    padding-top: 40px;
+  }
+}
+/* line 329, ../sass/style.scss */
+header ul li:nth-child(1) {
+  margin-left: 0;
+}
+/* line 334, ../sass/style.scss */
+header ul li a {
+  font-family: 'Teko', sans-serif;
+  text-transform: uppercase;
+  font-size: 21px;
+  letter-spacing: 1px;
+  color: #000;
+}
+/* line 341, ../sass/style.scss */
+header ul li a:hover {
+  color: #d62631;
+}
+
+/*======= HEADER MENU =======*/
+/*======= HOME =======*/
+/* line 358, ../sass/style.scss */
+.top-cover {
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+  color: #fff;
+  background-image: url(../images/top-cover.jpg);
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: bottom center;
+}
+/* line 368, ../sass/style.scss */
+.top-cover .logo-home {
+  width: 220px;
+  display: block;
+}
+/* line 373, ../sass/style.scss */
+.top-cover .video-home {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  min-width: 100%;
+}
+@media screen and (max-width: 1250px) {
+  /* line 373, ../sass/style.scss */
+  .top-cover .video-home {
+    width: inherit;
+  }
+}
+@media screen and (max-width: 991px) {
+  /* line 373, ../sass/style.scss */
+  .top-cover .video-home {
+    display: none;
+  }
+}
+/* line 390, ../sass/style.scss */
+.top-cover .content-cover {
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 100px;
+  transform: translateY(-50%);
+}
+@media screen and (max-width: 991px) {
+  /* line 390, ../sass/style.scss */
+  .top-cover .content-cover {
+    width: auto;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    text-align: center;
+  }
+}
+/* line 406, ../sass/style.scss */
+.top-cover .content-cover .cta {
+  margin-top: 40px;
+}
+/* line 411, ../sass/style.scss */
+.top-cover:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: -moz-linear-gradient(left, rgba(255, 255, 255, 0.65) 0%, transparent 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.65) 0%, transparent 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.65) 0%, transparent 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6ffffff', endColorstr='#00000000',GradientType=1 );
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* line 425, ../sass/style.scss */
+.citation {
+  max-width: 700px;
+  text-align: center;
+  margin: 50px auto;
+  position: relative;
+}
+/* line 431, ../sass/style.scss */
+.citation p {
+  text-align: center;
+  background: #caa870;
+  display: inline-block;
+  padding: 10px 15px;
+  color: #fff;
+  font-style: italic;
+  font-size: 18px;
+}
+/* line 441, ../sass/style.scss */
+.citation .picto-citation {
+  display: block;
+  width: 50px;
+}
+/* line 446, ../sass/style.scss */
+.citation .picto-citation2 {
+  display: block;
+  position: absolute;
+  width: 50px;
+  right: 0;
+}
+
+/* line 454, ../sass/style.scss */
+.block-dk {
+  background: #f7f2e3;
+  position: relative;
+  padding: 110px 0 100px;
+  margin-top: 150px;
+}
+/* line 460, ../sass/style.scss */
+.block-dk .title-dk {
+  text-align: center;
+}
+/* line 463, ../sass/style.scss */
+.block-dk .title-dk h5 {
+  margin-top: 10px;
+}
+/* line 468, ../sass/style.scss */
+.block-dk .photo-dk {
+  position: absolute;
+  left: 50%;
+  top: -85px;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  width: 180px;
+  height: 180px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 15px solid #f7f2e3;
+}
+/* line 480, ../sass/style.scss */
+.block-dk .photo-dk img {
+  width: 400px;
+  margin-left: -118px;
+  margin-top: -10px;
+}
+/* line 487, ../sass/style.scss */
+.block-dk p {
+  margin-top: 40px;
+}
+/* line 491, ../sass/style.scss */
+.block-dk .text-full {
+  display: none;
+}
+/* line 495, ../sass/style.scss */
+.block-dk .cta-brown {
+  position: absolute;
+  left: 50%;
+  bottom: 30px;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+}
+
+/* line 504, ../sass/style.scss */
+.last-acquisition {
+  padding: 70px 0;
+  position: relative;
+}
+/* line 508, ../sass/style.scss */
+.last-acquisition h5 {
+  text-align: center;
+}
+
+/*======= HOME =======*/
+/*======= GROUPE RAJA =======*/
+/* line 523, ../sass/style.scss */
+.group #map {
+  width: 100%;
+  height: 500px;
+}
+@media screen and (max-width: 991px) {
+  /* line 523, ../sass/style.scss */
+  .group #map {
+    height: 300px;
+  }
+}
+/* line 532, ../sass/style.scss */
+.group .story-photo {
+  text-align: center;
+  padding: 30px 0;
+}
+/* line 536, ../sass/style.scss */
+.group .story-photo img {
+  width: 250px;
+  padding-bottom: 10px;
+}
+/* line 541, ../sass/style.scss */
+.group .story-photo .bigphoto {
+  width: 100%;
+}
+/* line 547, ../sass/style.scss */
+.group .group-storybloc {
+  padding: 60px 0;
+}
+/* line 551, ../sass/style.scss */
+.group .group-storybloc h3 {
+  color: #d62631;
+  letter-spacing: 3px;
+  text-align: center;
+  padding-bottom: 70px;
+}
+/* line 557, ../sass/style.scss */
+.group .group-storybloc h3:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 2px;
+  height: 40px;
+  background: #d62631;
+  left: 50%;
+  margin-top: 10px;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+}
+
+/*======= GROUPE RAJA =======*/
+/*======= GALERIE =======*/
+/* line 583, ../sass/style.scss */
+.galerie {
+  padding-bottom: 30px;
+}
+/* line 587, ../sass/style.scss */
+.galerie .top-page {
+  padding-bottom: 70px;
+}
+/* line 590, ../sass/style.scss */
+.galerie .top-page .text-full {
+  display: none;
+  padding-bottom: 40px;
+}
+/* line 595, ../sass/style.scss */
+.galerie .top-page .cta {
+  margin-top: 20px;
+}
+/* line 599, ../sass/style.scss */
+.galerie .top-page .text-intro {
+  padding-bottom: 25px;
+}
+/* line 604, ../sass/style.scss */
+.galerie .filters {
+  text-align: center;
+}
+/* line 607, ../sass/style.scss */
+.galerie .filters a {
+  margin-left: 20px;
+  display: inline-block;
+  padding: 10px;
+  font-weight: 600;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+}
+/* line 615, ../sass/style.scss */
+.galerie .filters a:nth-child(1) {
+  margin-left: 0;
+}
+/* line 619, ../sass/style.scss */
+.galerie .filters a.active {
+  background: #eee;
+}
+
+/*======= GALERIE =======*/
+/*======= FICHE OEUVRE =======*/
+/* line 638, ../sass/style.scss */
+.fiche-oeuvre .top-page h4 {
+  padding-bottom: 10px;
+}
+/* line 642, ../sass/style.scss */
+.fiche-oeuvre .top-page p {
+  padding-top: 0px;
+  font-weight: 600;
+}
+/* line 648, ../sass/style.scss */
+.fiche-oeuvre .work-show-zone {
+  position: relative;
+  margin-top: 60px;
+  width: 100%;
+  overflow: hidden;
+}
+/* line 654, ../sass/style.scss */
+.fiche-oeuvre .work-show-zone img {
+  display: block;
+  max-height: 600px;
+  margin: 0 auto;
+  max-width: 100%;
+}
+/* line 661, ../sass/style.scss */
+.fiche-oeuvre .work-show-zone .hidden {
+  display: none;
+}
+/* line 666, ../sass/style.scss */
+.fiche-oeuvre .little-thumbnails {
+  padding-top: 40px;
+}
+/* line 669, ../sass/style.scss */
+.fiche-oeuvre .little-thumbnails ul {
+  text-align: center;
+}
+/* line 672, ../sass/style.scss */
+.fiche-oeuvre .little-thumbnails ul li {
+  display: inline-block;
+  overflow: hidden;
+  margin-left: 20px;
+  border: 1px solid #ddd;
+}
+/* line 678, ../sass/style.scss */
+.fiche-oeuvre .little-thumbnails ul li:nth-child(1) {
+  margin-left: 0;
+}
+/* line 682, ../sass/style.scss */
+.fiche-oeuvre .little-thumbnails ul li a {
+  display: block;
+  position: relative;
+  width: 50px;
+  height: 50px;
+}
+/* line 688, ../sass/style.scss */
+.fiche-oeuvre .little-thumbnails ul li a img {
+  display: block;
+  position: absolute;
+  width: 130%;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+}
+/* line 702, ../sass/style.scss */
+.fiche-oeuvre .desc-work {
+  padding: 30px;
+  text-align: center;
+  font-weight: 600;
+}
+/* line 709, ../sass/style.scss */
+.fiche-oeuvre .more {
+  display: inline-block;
+  margin-top: 20px;
+  color: #333;
+  text-decoration: underline;
+  font-weight: 700;
+}
+/* line 717, ../sass/style.scss */
+.fiche-oeuvre .same-author {
+  padding: 50px 0 40px;
+  display: block;
+}
+/* line 721, ../sass/style.scss */
+.fiche-oeuvre .same-author p {
+  text-align: center;
+}
+/* line 725, ../sass/style.scss */
+.fiche-oeuvre .same-author .thumb-work {
+  margin-top: 30px;
+}
+
+/*======= FICHE OEUVRE =======*/
+/*======= ARTISTES =======*/
+/* line 741, ../sass/style.scss */
+.artiste .top-page {
+  padding-bottom: 60px;
+}
+/* line 745, ../sass/style.scss */
+.artiste .author-list {
+  position: relative;
+  padding: 70px 0 140px;
+}
+@media screen and (max-width: 991px) {
+  /* line 745, ../sass/style.scss */
+  .artiste .author-list {
+    padding: 0 0 30px;
+  }
+}
+/* line 757, ../sass/style.scss */
+.artiste .author-list ul li .author-thumb {
+  display: block;
+  position: absolute;
+  right: 0;
+  display: none;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  opacity: 0;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+}
+@media screen and (max-width: 991px) {
+  /* line 757, ../sass/style.scss */
+  .artiste .author-list ul li .author-thumb {
+    display: none;
+  }
+}
+/* line 773, ../sass/style.scss */
+.artiste .author-list ul li a {
+  display: inline-block;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+}
+@media screen and (max-width: 991px) {
+  /* line 773, ../sass/style.scss */
+  .artiste .author-list ul li a {
+    display: block;
+    text-align: center;
+    margin-top: 40px;
+  }
+}
+/* line 784, ../sass/style.scss */
+.artiste .author-list ul li a:hover {
+  transform: translateX(10px);
+  -webkit-transform: translateX(10px);
+}
+@media screen and (max-width: 991px) {
+  /* line 784, ../sass/style.scss */
+  .artiste .author-list ul li a:hover {
+    transform: inherit;
+    -webkit-transform: inherit;
+  }
+}
+/* line 794, ../sass/style.scss */
+.artiste .author-list ul li a:hover + .author-thumb {
+  display: block;
+  opacity: 1;
+}
+@media screen and (max-width: 991px) {
+  /* line 794, ../sass/style.scss */
+  .artiste .author-list ul li a:hover + .author-thumb {
+    display: none;
+  }
+}
+/* line 803, ../sass/style.scss */
+.artiste .author-list ul li a h4 {
+  margin: 15px 0;
+}
+
+/*======= ARTISTES =======*/
+/*======= FICHE ARTISTE =======*/
+/* line 824, ../sass/style.scss */
+.fiche-artiste .wrapper {
+  position: relative;
+}
+/* line 830, ../sass/style.scss */
+.fiche-artiste .top-page p {
+  padding-top: 10px;
+}
+/* line 835, ../sass/style.scss */
+.fiche-artiste .author-bio {
+  padding: 50px 0 0;
+}
+/* line 839, ../sass/style.scss */
+.fiche-artiste .p-center {
+  position: absolute;
+  z-index: 1;
+  display: block;
+  padding: 0 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  margin-top: 50px;
+  font-weight: 600;
+  background: #fff;
+  text-align: center;
+}
+/* line 853, ../sass/style.scss */
+.fiche-artiste .lightbar {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #aaa;
+  margin-top: 65px;
+}
+/* line 862, ../sass/style.scss */
+.fiche-artiste .thumb-work {
+  margin-top: 60px;
+}
+/* line 866, ../sass/style.scss */
+.fiche-artiste .author-links {
+  margin-top: 50px;
+}
+/* line 869, ../sass/style.scss */
+.fiche-artiste .author-links li {
+  margin-top: 20px;
+  color: #333;
+}
+/* line 873, ../sass/style.scss */
+.fiche-artiste .author-links li span {
+  font-weight: 700;
+}
+/* line 877, ../sass/style.scss */
+.fiche-artiste .author-links li a {
+  color: #333;
+}
+
+/*======= FICHE ARTISTE =======*/
+/*======= ACTUS =======*/
+/* line 893, ../sass/style.scss */
+.actus {
+  padding-bottom: 30px;
+}
+/* line 900, ../sass/style.scss */
+.actus .list-short-article .article:nth-child(even) {
+  border-left: 10px solid #fff;
+}
+@media screen and (max-width: 991px) {
+  /* line 900, ../sass/style.scss */
+  .actus .list-short-article .article:nth-child(even) {
+    border: 0;
+  }
+}
+/* line 908, ../sass/style.scss */
+.actus .list-short-article .article:nth-child(odd) {
+  border-right: 10px solid #fff;
+}
+@media screen and (max-width: 991px) {
+  /* line 908, ../sass/style.scss */
+  .actus .list-short-article .article:nth-child(odd) {
+    border: 0;
+  }
+}
+/* line 918, ../sass/style.scss */
+.actus .article {
+  height: 400px;
+  background: #f6f6f6;
+  margin-top: 40px;
+  padding: 0;
+}
+@media screen and (max-width: 991px) {
+  /* line 918, ../sass/style.scss */
+  .actus .article {
+    height: auto;
+  }
+}
+/* line 928, ../sass/style.scss */
+.actus .article.short {
+  height: 600px;
+}
+/* line 931, ../sass/style.scss */
+.actus .article.short .thumb-article {
+  height: 200px;
+}
+/* line 934, ../sass/style.scss */
+.actus .article.short .thumb-article img {
+  width: 100%;
+  height: auto;
+}
+/* line 940, ../sass/style.scss */
+.actus .article.short .infos-article {
+  height: 400px;
+}
+/* line 949, ../sass/style.scss */
+.actus .article .thumb-article {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+  padding: 0;
+}
+@media screen and (max-width: 991px) {
+  /* line 949, ../sass/style.scss */
+  .actus .article .thumb-article {
+    height: 200px;
+  }
+}
+/* line 959, ../sass/style.scss */
+.actus .article .thumb-article img {
+  position: absolute;
+  height: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  -webkit-transform: translateY(-50%) translateX(-50%);
+}
+@media screen and (max-width: 991px) {
+  /* line 959, ../sass/style.scss */
+  .actus .article .thumb-article img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    top: inherit;
+    left: inherit;
+    transform: inherit;
+    -webkit-transform: inherit;
+  }
+}
+/* line 979, ../sass/style.scss */
+.actus .article .infos-article {
+  position: relative;
+  height: 100%;
+  padding: 0;
+}
+/* line 984, ../sass/style.scss */
+.actus .article .infos-article .infos-content {
+  padding: 50px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+}
+@media screen and (max-width: 991px) {
+  /* line 984, ../sass/style.scss */
+  .actus .article .infos-article .infos-content {
+    position: relative;
+    padding: 40px 20px;
+    top: inherit;
+    transform: inherit;
+    -webkit-transform: inherit;
+  }
+}
+/* line 999, ../sass/style.scss */
+.actus .article .infos-article .infos-content .blog-cat {
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #666;
+  letter-spacing: 1px;
+}
+/* line 1006, ../sass/style.scss */
+.actus .article .infos-article .infos-content h4 {
+  margin-top: 20px;
+  color: #d62631;
+}
+/* line 1011, ../sass/style.scss */
+.actus .article .infos-article .infos-content h5 {
+  margin-top: 5px;
+  font-weight: 600;
+}
+/* line 1016, ../sass/style.scss */
+.actus .article .infos-article .infos-content .excerpt-article {
+  margin-top: 25px;
+}
+/* line 1020, ../sass/style.scss */
+.actus .article .infos-article .infos-content .cta {
+  margin-top: 20px;
+}
+
+/*======= ACTUS =======*/
+/*======= PAGE ACTUS =======*/
+/* line 1036, ../sass/style.scss */
+.blog-page {
+  padding-bottom: 50px;
+}
+/* line 1041, ../sass/style.scss */
+.blog-page .top-page h3 {
+  color: #d62631;
+}
+/* line 1045, ../sass/style.scss */
+.blog-page .top-page h5 {
+  margin-top: 10px;
+}
+/* line 1050, ../sass/style.scss */
+.blog-page .cover-article {
+  margin-top: 70px;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+}
+@media screen and (max-width: 991px) {
+  /* line 1050, ../sass/style.scss */
+  .blog-page .cover-article {
+    height: auto;
+  }
+}
+/* line 1060, ../sass/style.scss */
+.blog-page .cover-article img {
+  width: 100%;
+}
+/* line 1066, ../sass/style.scss */
+.blog-page .content-article {
+  padding-top: 50px;
+}
+
+/*======= PAGE ACTUS =======*/
+/*======= CONTACT =======*/
+/* line 1081, ../sass/style.scss */
+.contact {
+  padding-bottom: 50px;
+}
+/* line 1087, ../sass/style.scss */
+.contact .coord p {
+  display: inline-block;
+  margin-left: 30px;
+}
+/* line 1091, ../sass/style.scss */
+.contact .coord p:nth-child(1) {
+  margin-left: 0;
+}
+/* line 1097, ../sass/style.scss */
+.contact .wpcf7 form div.visible-only-if-invalid {
+  display: none;
+}
+/* line 1101, ../sass/style.scss */
+.contact .wpcf7 form.invalid div.visible-only-if-invalid {
+  display: block;
+}
+/* line 1105, ../sass/style.scss */
+.contact .captcha {
+  margin: 20px auto;
+  width: 304px;
+}
+/* line 1111, ../sass/style.scss */
+.contact form {
+  display: block;
+  max-width: 600px;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+/* line 1117, ../sass/style.scss */
+.contact form label {
+  width: 100%;
+  margin-bottom: 30px;
+}
+/* line 1122, ../sass/style.scss */
+.contact form textarea {
+  max-width: 600px;
+  line-height: 22px;
+}
+/* line 1127, ../sass/style.scss */
+.contact form .wpcf7-submit {
+  display: inline-block;
+  margin: 0 auto;
+  display: block;
+  border: none;
+  background: #000;
+  color: #fff;
+  padding: 10px 30px;
+  font-family: 'Teko', sans-serif;
+  text-transform: uppercase;
+  font-size: 21px;
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+/* line 1141, ../sass/style.scss */
+.contact form .wpcf7-submit:hover {
+  background: #d62631;
+  color: #fff;
+}
+/* line 1146, ../sass/style.scss */
+.contact form .wpcf7-submit:focus {
+  color: #fff;
+}
+/* line 1152, ../sass/style.scss */
+.contact .input {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ddd;
+  margin: 20px 0 10px;
+  transition: 0.2s;
+}
+/* line 1160, ../sass/style.scss */
+.contact .input:focus {
+  outline: none;
+  text-indent: 10px;
+}
+/* line 1166, ../sass/style.scss */
+.contact .wpcf7-response-output, .contact .wpcf7-display-none, .contact .wpcf7-validation-errors {
+  padding: 20px;
+  line-height: 20px;
+  border: 1px solid #eb5563;
+}
+/* line 1172, ../sass/style.scss */
+.contact .ajax-loader {
+  margin-top: 6px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  width: 30px;
+}
+
+/*======= CONTACT =======*/
+/*======= RESPONSIVE =======*/
+/* line 1190, ../sass/style.scss */
+.burger-btn {
+  position: fixed;
+  z-index: 5;
+  left: 20px;
+  cursor: pointer;
+  padding: 12px 0;
+  display: none;
+  top: 17px;
+}
+@media screen and (max-width: 991px) {
+  /* line 1190, ../sass/style.scss */
+  .burger-btn {
+    display: block;
+  }
+}
+/* line 1203, ../sass/style.scss */
+.burger-btn span {
+  position: relative;
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: #333;
+  transition: all .2s ease-in-out;
+}
+/* line 1211, ../sass/style.scss */
+.burger-btn span:before, .burger-btn span:after {
+  position: absolute;
+  background: #333;
+  content: '';
+  width: 20px;
+  height: 2px;
+  transition: all .2s ease-in-out;
+}
+/* line 1220, ../sass/style.scss */
+.burger-btn span:before {
+  top: -8px;
+}
+/* line 1224, ../sass/style.scss */
+.burger-btn span:after {
+  top: 8px;
+}
+
+/* line 1231, ../sass/style.scss */
+.burger-btn.active span {
+  background: transparent;
+}
+/* line 1234, ../sass/style.scss */
+.burger-btn.active span:before {
+  transform: rotate(45deg) translate(5px, 6px);
+}
+/* line 1238, ../sass/style.scss */
+.burger-btn.active span:after {
+  transform: rotate(-45deg) translate(5px, -6px);
+}
+
+/*======= RESPONSIVE =======*/
