@@ -2,7 +2,7 @@
 
 <?php get_header(); ?>
 
-		
+
 	<div class="top-cover">
 		<div class="content-cover">
 			<h1>
@@ -10,7 +10,7 @@
 			</h1>
 			<a href="<?php echo get_page_link(page_id_gallery);?>" class="cta">Voir la galerie</a>
 		</div>
-		<?php 
+		<?php
 
 			$file = get_field('background-video');
 
@@ -20,7 +20,7 @@
 	<div class="wrapper">
 		<div class="citation">
 			<img src="<?php echo get_template_directory_uri(); ?>/assets/images/citation.png" class="picto-citation">
-			<?php if(get_field('citation')): ?>		
+			<?php if(get_field('citation')): ?>
 
 				<?php while(has_sub_field('citation')): ?>
 					<div>
@@ -44,7 +44,7 @@
 			<p class="text-intro">C’est un immense plaisir pour moi de dévoiler la collection d’art contemporain, <strong>RAJA’ Art</strong>, installée au siège européen du Groupe près de Roissy. Cet événement marque d’une pierre blanche l’inauguration des espaces rénovés pour y accueillir la collection enrichie de nouvelles acquisitions. La collection exposée dans des conditions « muséales » est également valorisée par une scénographie créative.<br/><br/>Il y a une vingtaine d’années, j’ai découvert l’intérêt des artistes pour les matériaux d’emballage et commencé la collection <strong>RAJA’ Art</strong>, qui compte aujourd’hui une centaine d’œuvres : peintures, sculptures, photographies, installations et vidéos, créées par des artistes reconnus ou émergents, français et internationaux.</p>
 			<a href="" class="cta read-less cta-brown">Fermer</a>
 			<p class="text-full">La collection RAJA’ Art est unique, car elle est centrée sur le thème de l’emballage, en pleine cohérence avec notre cœur de métier et l’univers de RAJA, leader européen de la distribution d’emballages, de fournitures et d’équipements pour les entreprises.<br/><br/>Chacune des œuvres de la collection est en lien avec les matériaux d’emballage : bois, papier, carton ondulé, polyéthylène,  celle, ou avec la représentation des emballages eux- mêmes : palettes, rubans adhésifs, sachets, caisses en carton,  lms à bulle... Certaines œuvres ont été réalisées à partir de ces matériaux, d’autres s’en inspirent, sublimant les supports d’emballages en les transposant en marbre, bois, bronze, métal, plastique, céramique,...<br/><br/> Cette collection est, depuis le début, dédiée aux collaboratrices et collaborateurs de l’entreprise, qui vivent et travaillent quotidiennement en contact avec les œuvres exposées. L’art contribue à stimuler les esprits. C’est une ouverture sur le monde qui développe la capacité à rêver et invite aux échanges, à la ré exion et à l’émotion. Le travail des artistes à travers leurs œuvres donne également de la noblesse aux matériaux que nous utilisons tous les jours.<br/><br/>Comme à la Fondation Villa Datris que j’ai créée en 2010 à L’Isle-sur-la-Sorgue et dont c’est la vocation, je souhaite que l’art contemporain soit accessible à tous.<br/><br/>Ainsi, la collection RAJA’ Art fédère les collaborateurs autour de valeurs communes : créativité, solidarité et engagement.</p>
-			<a href="" class="cta read-more cta-brown">Lire la suite</a>
+			<a href="" class="cta read-more cta-brown"><?php echo __('Lire la suite', 'raja') ?></a>
 		</div>
 	</div>
 	<div class="last-acquisition">
@@ -74,5 +74,5 @@
 			</div>
 		</div>
 	</div>
-		
+
 <?php get_footer(); ?>

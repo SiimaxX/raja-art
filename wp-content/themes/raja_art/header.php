@@ -10,15 +10,16 @@
    </head>
    <body <?php body_class(); ?>>
 
+       <?php do_action('wpml_add_language_selector'); ?>
       <header>
          <a href="#" class="burger-btn"><span class="<?php echo $classMenu; ?>"></span></a>
          <a href=""><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alr="Raja Art" class="raja-art-logo"></a>
          <ul class="active-menu">
-            <li><a href="<?php echo get_page_link(page_id_home);?>">Accueil</a></li>
-            <li><a href="<?php echo get_page_link(page_id_group);?>">Groupe RAJA</a></li>
-            <li><a href="<?php echo get_page_link(page_id_gallery);?>">Galerie</a></li>
-            <li><a href="<?php echo get_page_link(page_id_artists);?>">Artistes</a></li>
-            <li><a href="<?php echo get_page_link(page_id_actuality);?>">Actualité et presse</a></li>
-            <li><a href="<?php echo get_page_link(page_id_contact);?>">Contact</a></li>
+            <li><a href="<?php echo get_page_link(page_id_home);?>"><?php echo __('Accueil', 'raja') ?></a></li>
+            <li><a href="<?php echo get_page_link(page_id_group);?>"><?php echo __('Groupe RAJA', 'raja') ?></a></li>
+            <li><a href="<?php echo get_page_link(page_id_gallery);?>"><?php echo __('Galerie', 'raja') ?></a></li>
+            <li><a href="<?php echo get_page_link(page_id_artists);?>"><?php echo __('Artistes', 'raja') ?></a></li>
+            <li><a href="<?php echo get_page_link(page_id_actuality);?>"><?php echo __('Actualité et presse', 'raja') ?></a></li>
+            <li><a href="<?php echo get_page_link(page_id_contact);?>"><?php echo __('Contact', 'raja') ?></a></li>
          </ul>
       </header>
